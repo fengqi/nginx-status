@@ -1,2 +1,49 @@
-<!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+<view class="container">
+    <view class='server_show flex-column'>
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">item</text>
+            <text class="flex-cell flex-row flex-row-data">data</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">Active conns</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.active_connections}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">server</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.server}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">accepts</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.accepts}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">handled requests</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.handled}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">losted requests</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.lost}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">Reading</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.reading}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">Writing</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.writing}}</text>
+        </view>
+
+        <view class="flex-cell flex-row">
+            <text class="flex-cell flex-row">Waiting</text>
+            <text class="flex-cell flex-row flex-row-data">{{status.waiting}}</text>
+        </view>
+
+    </view>
+</view>
