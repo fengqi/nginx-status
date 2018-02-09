@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/list/list",
+        "pages/index/index",
         "pages/add/add",
         "pages/show/show"
     ],
@@ -18,7 +18,7 @@
         "list": [
             {
                 "text": "列表",
-                "pagePath": "pages/list/list",
+                "pagePath": "pages/index/index",
                 "iconPath": "images/home.png",
                 "selectedIconPath": "/images/home_active.png"
             },

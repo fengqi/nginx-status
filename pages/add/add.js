@@ -116,7 +116,7 @@ Page({
                 })
 
                 wx.switchTab({
-                    url: '/pages/list/list',
+                    url: '/pages/index/index',
                 })
             },
             complete: function (e) {
