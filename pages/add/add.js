@@ -4,7 +4,13 @@ Page({
      * 页面的初始数据
      */
     data: {
-        showView: false
+        showView: false,
+        host: {
+            host: '',
+            label: '',
+            username: '',
+            password: ''
+        }
     },
 
     /**
@@ -94,6 +100,7 @@ Page({
             password: host.password,
         }
 
+        var that = this;
         wx.setStorage({
             key: cacheKey,
             data: server,
@@ -101,6 +108,11 @@ Page({
                 wx.showToast({
                     title: '添加成功',
                     icon: "success"
+                });
+
+                that.setData({
+                    showView: false,
+                    host: {},
                 })
             },
             complete: function (e) {
@@ -112,7 +124,8 @@ Page({
     formReset: function (e) {
         console.log('form发生了reset事件，携带数据为：', e.detail.value)
         this.setData({
-            chosen: ''
+            showView: false,
+            host: {},
         })
     }
 })

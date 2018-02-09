@@ -3,12 +3,12 @@
         <form catchsubmit="formSubmit" catchreset="formReset">
             <view class='page-section page-section-gap'>
                 <view class='page-section-title'>服务器地址: </view>
-                <input name="host" placeholder="NginxStatus 地址" class='host' maxlength='-1' />
+                <input name="host" placeholder="NginxStatus 地址" class='host' value='{{host.host}}' />
             </view>
 
             <view class='page-section page-section-gap'>
                 <view class='page-section-title'>显示名称: </view>
-                <input name="label" placeholder="显示在列表的名称" class='host' maxlength='-1' />
+                <input name="label" placeholder="显示在列表的名称" class='host' value='{{host.label}}' />
             </view>
 
             <view class="page-section page-section-gap">
@@ -19,12 +19,12 @@
             <view class="auth_view_hide {{showView ? 'auth_view_show' : 'auth_view_hide'}}">
                 <view class='page-section'>
                     <view class='username page-section-title'>用户名</view>
-                    <input name='username' placeholder='用户名' maxlength='-1' />
+                    <input name='username' placeholder='用户名' value='{{host.username}}' />
                 </view>
 
                 <view class='page-section'>
                     <view class='username page-section-title'>密码</view>
-                    <input type='password' name='password' placeholder='密码' maxlength='-1' />
+                    <input type='password' name='password' placeholder='密码' value='{{host.password}}' />
                 </view>
             </view>
 
