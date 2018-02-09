@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/list/list",
-        "pages/add/add"
+        "pages/add/add",
+        "pages/show/show"
     ],
     "window": {
         "backgroundTextStyle": "light",
