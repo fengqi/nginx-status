@@ -94,7 +94,7 @@ Page({
         }
 
         server[host.label] = {
-            host: host.host,
+            host: this.formatHost(host.host),
             label: host.label,
             username: host.username,
             password: host.password,
@@ -114,6 +114,10 @@ Page({
                     showView: false,
                     host: {},
                 })
+
+                wx.switchTab({
+                    url: '/pages/list/list',
+                })
             },
             complete: function (e) {
                 console.log(e)
@@ -127,5 +131,22 @@ Page({
             showView: false,
             host: {},
         })
+    },
+
+    formatHost: function (host) {
+        if (!host) {
+            return host;
+        }
+
+        var http = host.substr(0, 7).toLowerCase(), 
+            https = host.substr(0, 8).toLowerCase();
+
+        console.log(http, https);
+
+        if (http == "http://" || https == "https://") {
+            return host;
+        }
+
+        return "http://" + host;
     }
 })
