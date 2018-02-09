@@ -1,0 +1,6 @@
+<view class="container">
+    <block wx:for="{{server}}" wx:for-index="label" wx:for-item="item">
+        <view> {{label}}: </view>
+        <view> {{item.host}} </view>
+    </block>
+</view>

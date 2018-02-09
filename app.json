@@ -1,0 +1,32 @@
+{
+    "pages": [
+        "pages/list/list",
+        "pages/add/add"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Nginx Status",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#ccc",
+        "selectedColor": "#35495e",
+        "borderStyle": "white",
+        "backgroundColor": "#f9f9f9",
+        "list": [
+            {
+                "text": "列表",
+                "pagePath": "pages/list/list",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "/images/home_active.png"
+            },
+            {
+                "text": "添加",
+                "pagePath": "pages/add/add",
+                "iconPath": "images/add.png",
+                "selectedIconPath": "images/add_active.png"
+            }
+        ]
+    }
+}

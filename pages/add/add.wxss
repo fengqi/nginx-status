@@ -1,0 +1,24 @@
+.page-body {
+    width: 100%;
+}
+
+.page-section {
+    margin: 20px 0;
+}
+
+.page-section-title {
+    margin-bottom: 5px;
+}
+
+.btn-area button {
+    width: 100%;
+    margin-top: 10px
+}
+
+.auth_view_hide {
+    display: none;
+}
+
+.auth_view_show {
+    display: block;
+}
