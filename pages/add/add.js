@@ -1,4 +1,5 @@
-// pages/add/add.js
+var util = require('../../utils/util.js');
+
 Page({
     /**
      * 页面的初始数据
@@ -94,7 +95,7 @@ Page({
         }
 
         server[host.label] = {
-            host: this.formatHost(host.host),
+            host: util.formatHost(host.host),
             label: host.label,
             username: host.username,
             password: host.password,
@@ -131,22 +132,5 @@ Page({
             showView: false,
             host: {},
         })
-    },
-
-    formatHost: function (host) {
-        if (!host) {
-            return host;
-        }
-
-        var http = host.substr(0, 7).toLowerCase(), 
-            https = host.substr(0, 8).toLowerCase();
-
-        console.log(http, https);
-
-        if (http == "http://" || https == "https://") {
-            return host;
-        }
-
-        return "http://" + host;
     }
 })

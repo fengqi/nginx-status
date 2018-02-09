@@ -14,6 +14,24 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const formatHost = host => {
+    if (!host) {
+        return host;
+    }
+
+    var http = host.substr(0, 7).toLowerCase(),
+        https = host.substr(0, 8).toLowerCase();
+
+    console.log(http, https);
+
+    if (http == "http://" || https == "https://") {
+        return host;
+    }
+
+    return "http://" + host;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatHost: formatHost
 }
